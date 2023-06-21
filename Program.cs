@@ -1,4 +1,5 @@
 ﻿using Game_Card;
+using RandomCardList;
 
 internal class Program
 {
@@ -11,6 +12,12 @@ internal class Program
         {
             ListCard.Add(RandomCard(random));
         }
+        //Show in terminal content of list
+        PrintCards(ListCard);
+        Console.WriteLine("Cards now are sorted:");
+        //Sort cards into list
+        CardComparerByValue sortCard = new CardComparerByValue();
+        ListCard.Sort(sortCard);
         //Show in terminal content of list
         PrintCards(ListCard);
 
