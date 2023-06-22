@@ -18,5 +18,10 @@ namespace Game_Card
             this.Value = value.ToString();
             this.Suit = suit.ToString();
         }
+
+        public override string ToString()
+        {
+            return $"{Value} {Suit}";
+        }
     }
 }

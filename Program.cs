@@ -35,10 +35,11 @@ internal class Program
     //static functions to show contents list on screen
     static void PrintCards(List<Card> cards)
     {
-        int i = cards.Count;
-        for(int j =0; j < i; j++)
+        int i = 1;
+        foreach(Card card in cards)
         {
-            Console.WriteLine($"{j}: {cards[j].Name}");
+            Console.WriteLine($"{i}: {card}");
+            i++;
         }
     }
 }
